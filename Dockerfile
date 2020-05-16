@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-glibc
 
-RUN apk upgrade && apk add bash bash-completion git curl sudo
+RUN apk upgrade && apk add --no-cache bash bash-completion git curl sudo libstdc++
 
 RUN adduser meteor -D -s /bin/bash \
     && echo 'meteor ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers \
